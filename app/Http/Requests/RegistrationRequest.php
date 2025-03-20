@@ -11,7 +11,7 @@ class RegistrationRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -22,7 +22,10 @@ class RegistrationRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'email' => ['required', 'email',],
+            'phone' => ['required', 'regex:/^228\d{8}$/'],
+            'name' => ['required', 'string', 'min:4'],
+            'tournament_type' => ['required', 'in:Dev,CyberSec'],
         ];
     }
 }

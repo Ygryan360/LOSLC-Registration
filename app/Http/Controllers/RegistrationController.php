@@ -2,9 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\StoreRegistrationRequest;
-use App\Http\Requests\UpdateRegistrationRequest;
 use App\Models\Registration;
+use App\Http\Requests\RegistrationRequest;
 
 class RegistrationController extends Controller
 {
@@ -13,7 +12,7 @@ class RegistrationController extends Controller
      */
     public function index()
     {
-        //
+        return view('home');
     }
 
     /**
@@ -21,46 +20,16 @@ class RegistrationController extends Controller
      */
     public function create()
     {
-        //
+        return view('registration');
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreRegistrationRequest $request)
+    public function store(RegistrationRequest $request)
     {
-        //
+        Registration::create($request->validated());
+        return redirect()->route('home')->with('success', 'Votre inscription a bien été prise en compte.');
     }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(Registration $registration)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(Registration $registration)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(UpdateRegistrationRequest $request, Registration $registration)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(Registration $registration)
-    {
-        //
-    }
 }
