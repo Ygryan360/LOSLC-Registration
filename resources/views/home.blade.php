@@ -4,8 +4,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Linux & Open Source Lovers Community | Inscription au tournoi</title>
+    <meta name="description"
+        content="Premier tournoi de compétences techniques organisé par la communauté Linux & Open Source Lovers Community et Ethix">
+    <meta name="author" content="Linux & Open Source Lovers Community">
+    <meta name="robots" content="index, follow">
+    <meta name="keywords" content="Linux, Open Source, Lovers, Community, Ethix, Tournoi, Développement, Cybersécurité">
+    <meta name="canonical" content="https://loslc.alwaysdata.net">
+    <meta property="og:title" content="Linux & Ethix | Inscription au tournoi">
+    <meta property="og:description"
+        content="Premier tournoi de compétences techniques organisé par la communauté Linux & Open Source Lovers Community et Ethix">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://loslc.alwaysdata.net">
+    <meta property="og:image" content="https://loslc.alwaysdata.net/cover.png">
+    <meta property="og:site_name" content="Linux & Ethix">
+    <meta property="og:locale" content="fr_FR">
+
+    <title>Loslc & Ethix| Inscription au tournoi</title>
+
+    <!-- Scripts & Css -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
 </head>
 
 <body>
@@ -13,7 +34,7 @@
         <div class="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900">
             <div class="container mx-auto px-4 pt-20 pb-12">
                 <div class="text-center">
-                    <h1 class="text-5xl font-bold text-white mb-6">Linux &amp; Open Source Lovers Community</h1>
+                    <h1 class="text-5xl font-bold text-white mb-6">Linux &amp; Open Source Lovers Community & ETHIX</h1>
                     <p class="text-blue-300 text-xl mb-8">Premier tournoi de compétences techniques</p>
                     <div class="flex justify-center gap-8 mb-12 flex-wrap">
                         <div class="bg-blue-800/30 p-6 rounded-lg backdrop-blur-sm">
@@ -61,6 +82,7 @@
                         <div>
                             <label for="name" class="block text-blue-300 mb-2">Nom Complet</label>
                             <input type="text" id="name" value="{{ old('name') }}" name="name"
+                                placeholder="John Doe"
                                 class="w-full bg-gray-700 text-white rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
                                 required="">
                             @error('name')
@@ -72,6 +94,7 @@
                         <div>
                             <label for="phone" class="block text-blue-300 mb-2">Téléphone</label>
                             <input type="tel" id="phone" value="{{ old('phone') }}" name="phone"
+                                placeholder="228 90 00 00 00"
                                 class="w-full bg-gray-700 text-white rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
                                 required="">
                             @error('phone')
@@ -83,6 +106,7 @@
                         <div>
                             <label for="email" class="block text-blue-300 mb-2">Email</label>
                             <input type="email" id="email" value="{{ old('email') }}" name="email"
+                                placeholder="email@exemple.tg"
                                 class="w-full bg-gray-700 text-white rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
                                 required="">
                             @error('email')
@@ -101,7 +125,8 @@
                                     Sélectionnez une option</option>
                                 <option value="Dev" {{ old('tournament_type') === 'Dev' ? 'selected' : '' }}>
                                     Développement</option>
-                                <option value="CyberSec" {{ old('tournament_type') === 'CyberSec' ? 'selected' : '' }}>
+                                <option value="CyberSec"
+                                    {{ old('tournament_type') === 'CyberSec' ? 'selected' : '' }}>
                                     Cybersécurité</option>
                             </select>
                             @error('tournament_type')
