@@ -10,13 +10,13 @@
     <meta name="robots" content="index, follow">
     <meta name="keywords" content="Linux, Open Source, Lovers, Community, Ethix, Tournoi, Développement, Cybersécurité">
     <meta name="canonical" content="https://loslc.alwaysdata.net">
-    <meta property="og:title" content="Linux & Ethix | Inscription au tournoi">
+    <meta property="og:title" content="Loslc & Ethix | Inscription au tournoi">
     <meta property="og:description"
         content="Premier tournoi de compétences techniques organisé par la communauté Linux & Open Source Lovers Community et Ethix">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://loslc.alwaysdata.net">
     <meta property="og:image" content="https://loslc.alwaysdata.net/cover.png">
-    <meta property="og:site_name" content="Linux & Ethix">
+    <meta property="og:site_name" content="Loslc & Ethix">
     <meta property="og:locale" content="fr_FR">
 
     <title>Loslc & Ethix| Inscription au tournoi</title>
