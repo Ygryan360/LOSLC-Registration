@@ -94,7 +94,7 @@
                         <div>
                             <label for="phone" class="block text-blue-300 mb-2">Téléphone</label>
                             <input type="tel" id="phone" value="{{ old('phone') }}" name="phone"
-                                placeholder="228 90 00 00 00"
+                                placeholder="22890123456"
                                 class="w-full bg-gray-700 text-white rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
                                 required="">
                             @error('phone')
