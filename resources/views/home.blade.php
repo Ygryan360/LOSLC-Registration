@@ -15,7 +15,7 @@
         content="Premier tournoi de compétences techniques organisé par la communauté Linux & Open Source Lovers Community et Ethix">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://loslc.alwaysdata.net">
-    <meta property="og:image" content="https://loslc.alwaysdata.net/cover.png">
+    <meta property="og:image" content="https://loslc.alwaysdata.net/loslc_x_ethix.png">
     <meta property="og:site_name" content="Loslc & Ethix">
     <meta property="og:locale" content="fr_FR">
 
