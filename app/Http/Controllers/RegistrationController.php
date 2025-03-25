@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Registration;
+use App\Mail\ConfirmRegistration;
+use Illuminate\Support\Facades\Mail;
 use App\Http\Requests\RegistrationRequest;
 
 class RegistrationController extends Controller
@@ -20,8 +22,11 @@ class RegistrationController extends Controller
      */
     public function store(RegistrationRequest $request)
     {
-        Registration::create($request->validated());
-        return redirect()->route('home')->with('success', 'Votre inscription a bien été prise en compte.');
+        $registration = Registration::create($request->validated());
+        Mail::to($registration->email)->send(new ConfirmRegistration($registration));
+        $registration->confirmed = true;
+        $registration->save();
+        return redirect()->route('home')->with('success', 'Votre inscription a bien été prise en compte. Vous allez recevoir un email de confirmation.');
     }
 
 }
