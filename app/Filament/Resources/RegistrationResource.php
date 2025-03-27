@@ -9,6 +9,8 @@ use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
+use Filament\Tables\Columns\BooleanColumn;
+use Filament\Tables\Filters\SelectFilter;
 use Filament\Tables\Table;
 use Filament\Tables\Columns\TextColumn;
 use Illuminate\Database\Eloquent\Builder;
@@ -54,8 +56,10 @@ class RegistrationResource extends Resource
                 TextColumn::make('email')
                     ->searchable()
                     ->sortable(),
+                BooleanColumn::make('confirmed'),
                 TextColumn::make('phone')
                     ->searchable()
+                    ->toggleable(isToggledHiddenByDefault: true)
                     ->sortable(),
                 TextColumn::make('tournament_type')
                     ->searchable()
@@ -63,10 +67,19 @@ class RegistrationResource extends Resource
                 TextColumn::make('created_at')
                     ->searchable()
                     ->date()
+                    ->toggleable(isToggledHiddenByDefault: true)
                     ->sortable(),
             ])
             ->filters([
-                //
+                SelectFilter::make('tournament_type')
+                    ->options([
+                        'Dev' => 'Dev',
+                        'CyberSec' => 'CyberSec',
+                    ])
+                    ->label('Type de tournoi'),
+
+
+
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
