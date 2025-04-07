@@ -5,7 +5,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Confirmation d'inscription - LOSLC</title>
+    <title>Le tournoi débute bientôt - LOSLC</title>
 </head>
 
 <body style="margin: 0; padding: 0; background-color: #f4f4f4; font-family: Arial, sans-serif;">
@@ -61,43 +61,26 @@
                                 <tr>
                                     <td
                                         style="font-size: 24px; font-weight: bold; color: #5076f6; text-align: center; padding-bottom: 20px;">
-                                        Inscription confirmée !
+                                        Le tournoi commence bientôt !
                                     </td>
                                 </tr>
                                 <tr>
                                     <td style="font-size: 16px; line-height: 24px; color: #333333; text-align: center;">
                                         Bonjour {{ $registration->name }},<br><br>
-                                        Nous sommes ravis de confirmer votre inscription au tournoi de la <strong>LOSLC
-                                            & ETHIX</strong> ! Voici les détails de votre participation :
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td style="padding: 20px 0;">
-                                        <table border="0" cellpadding="0" cellspacing="0" width="100%"
-                                            style="background-color: #1e2a36; border-radius: 5px;">
-                                            <tr>
-                                                <td style="padding: 20px; color: #e0e0e0; font-size: 16px;">
-                                                    <strong>Nom :</strong> {{ $registration->name }}<br>
-                                                    <strong>Téléphone :</strong> {{ $registration->phone }}<br>
-                                                    <strong>Email :</strong> {{ $registration->email }}<br>
-                                                    <strong>Type de tournoi :</strong>
-                                                    {{ $registration->tournament_type }}
-                                                </td>
-                                            </tr>
-                                        </table>
+                                        Nous souhaitons vous annoncer que le tournoi va bientôt commencer et nous vous
+                                        donnons rendez-vous sur notre serveur discord pour le déroulement.
                                     </td>
                                 </tr>
                                 <tr>
                                     <td style="font-size: 16px; line-height: 24px; color: #333333; text-align: center;">
-                                        Préparez-vous à montrer vos talents ! Plus d'informations sur le tournoi vous
-                                        seront envoyées prochainement.
+                                        Voici le lien de notre serveur discord :
                                     </td>
                                 </tr>
                                 <tr>
                                     <td style="text-align: center; padding-top: 30px;">
-                                        <a href="{{ url('/') }}"
+                                        <a href="https://discord.gg/EyUTf4cS"
                                             style="background-color: #5076f6; color: #ffffff; padding: 12px 25px; text-decoration: none; font-size: 16px; border-radius: 5px; display: inline-block;">
-                                            Visiter le site
+                                            Rejoindre le serveur
                                         </a>
                                     </td>
                                 </tr>

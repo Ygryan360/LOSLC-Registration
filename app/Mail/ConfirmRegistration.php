@@ -30,7 +30,7 @@ class ConfirmRegistration extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: 'Confirmation d\'inscription',
+            subject: 'Avis de commencement du tournoi',
             from: 'loslcommunity@gmail.com',
         );
     }
